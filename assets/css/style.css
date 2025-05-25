@@ -2760,6 +2760,17 @@ pre { margin-top: 0; margin-bottom: 0; font-family: "SFMono-Regular", Consolas, 
 
 .highlight table pre { margin: 0; }
 
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  color: #e8e8e8;
+  background-color: #1c1c1d !important;
+  font-size: 0.75rem;
+}
+
 .highlight .cm { color: #999988; font-style: italic; }
 
 .highlight .cp { color: #999999; font-weight: bold; }

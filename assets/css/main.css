@@ -1959,6 +1959,16 @@ a.bg-dark:hover, a.bg-dark:focus, button.bg-dark:hover, button.bg-dark:focus { b
 .fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 1030; }
 
 .fixed-bottom { position: fixed; right: 0; bottom: 0; left: 0; z-index: 1030; }
+.fixed-bottom {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1030;
+  color: #e8e8e8;
+  background-color: #1c1c1d !important;
+  font-size: 0.75rem;
+}
 
 @supports (position: sticky) { .sticky-top { position: sticky; top: 0; z-index: 1020; } }
 
