@@ -7,3 +7,6 @@ Gemfile.lock
 .DS_store
 .bundle
 vendor
+assets/.DS_store
+newsletter/.DS_store
+projects/.DS_store
