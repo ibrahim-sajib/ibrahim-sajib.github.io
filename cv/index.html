@@ -1,680 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Md Ibrahim | cv</title>
-    <meta name="description" content="Personal website of Anthony Platanios." />
+    <title>Md Ibrahim | CV</title>
+    <meta name="description" content="Curriculum Vitae of Md Ibrahim, Software Engineer." />
 
-    <!-- Fonts and Icons -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"
-    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/academicons.min.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/terminal.css" />
     <link rel="canonical" href="/cv/" />
 
     <!-- Scripts -->
-    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+    <script src="/assets/js/terminal-shell.js" defer></script>
   </head>
   <body>
-    <!-- Header -->
-    <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
-      <div class="container-fluid p-0">
-        <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Md</span> Ibrahim</a>
-
-        <button
-          class="navbar-toggler ml-auto"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item">
-              <a class="nav-link" href="/"> About </a>
-            </li>
-
-            <li class="nav-item navbar-active font-weight-bold">
-              <a class="nav-link" href="/cv/">
-                CV
-
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/projects/"> Projects </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/publications/"> Publications </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/teaching/"> Teaching </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/moments/"> Moments </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Scrolling Progress Bar -->
-    <progress id="progress" value="0">
-      <div class="progress-container">
-        <span class="progress-bar"></span>
-      </div>
-    </progress>
-
-    <!-- Content -->
-    <div class="content">
-      <h1>cv</h1>
-      <h6></h6>
-
-      <!-- Place PDF download link at the top right. -->
-      <div class="row" style="margin-top: -3.5em">
-        <a class="ml-auto mr-2" href="/assets/pdf/Md_Ibrahim_CV.pdf" target="_blank">
-          <img height="60px" src="/assets/img/pdf_icon.svg" />
+    <div class="content-wrapper" id="resume">
+      <h1>CV</h1>
+      
+      <!-- PDF Link -->
+      <div style="margin-bottom: 30px; text-align: right;">
+        <a href="/assets/pdf/Md_Ibrahim_CV.pdf" target="_blank" style="border: none;">
+          <img height="40px" src="/assets/img/pdf_icon.svg" alt="Download PDF" style="filter: invert(1); opacity: 0.8;" />
         </a>
       </div>
 
-      <div class="cv">
-        <div class="card mt-3 p-3">
+      <div class="cv-content">
+        <div class="card p-3">
           <h3 class="card-title">General Information</h3>
-          <div>
-            <table class="table table-sm table-borderless">
-              <tr>
-                <td class="p-0 pr-2 font-weight-bold text-right"><b>Full Name</b></td>
-                <td class="p-0 pl-2 font-weight-light text-left">Md Ibrahim</td>
-              </tr>
-
-              <tr>
-                <td class="p-0 pr-2 font-weight-bold text-right"><b>Date of Birth</b></td>
-                <td class="p-0 pl-2 font-weight-light text-left">2nd April 2000</td>
-              </tr>
-
-              <tr>
-                <td class="p-0 pr-2 font-weight-bold text-right"><b>Nationality</b></td>
-                <td class="p-0 pl-2 font-weight-light text-left">Bangladeshi</td>
-              </tr>
-
-              <tr>
-                <td class="p-0 pr-2 font-weight-bold text-right"><b>Languages</b></td>
-                <td class="p-0 pl-2 font-weight-light text-left">Bengali (native), English (fluent)</td>
-              </tr>
-            </table>
-          </div>
+          <table class="table table-sm table-borderless">
+            <tr><td><b>Full Name</b></td><td>Md Ibrahim</td></tr>
+            <tr><td><b>Date of Birth</b></td><td>2nd April 2000</td></tr>
+            <tr><td><b>Nationality</b></td><td>Bangladeshi</td></tr>
+            <tr><td><b>Languages</b></td><td>Bengali (native), English (fluent)</td></tr>
+          </table>
         </div>
 
-        <div class="card mt-3 p-3">
-          <h3 class="card-title">Research Areas</h3>
-          <div>
-            <ul class="card-text font-weight-light list-group list-group-flush">
-              <li class="list-group-item">
-                Machine learning and artificial intelligence with a focus on learning collections of functions, neural
-                cognitive architectures, and applications of AI and ML to natural language processing, computer vision
-                and finance.
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card mt-3 p-3">
+        <div class="card p-3">
           <h3 class="card-title">Education</h3>
-          <div>
-            <ul class="card-text font-weight-light list-group list-group-flush">
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2019-23
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <h6 class="title font-weight-bold ml-1 ml-md-4">
-                      Uttara University – BSc in Computer Science and Engineering.
-                    </h6>
-
-                    <ul class="items">
-                      <li>
-                        <span class="item"
-                          ><b>Dean’s List</b> for exceptional academic performance (2019,2020,2021).</span
-                        >
-                      </li>
-
-                      <li>
-                        <span class="item-title"
-                          ><u>Grade:</u> 3.83/4 (top 1% of class) with <b>First-Class Honors Degree</b>.</span
-                        >
-                        <ul class="subitems">
-                          <!-- <li><span class="subitem">Equivalent to <b>4.0 GPA</b> in the USA academic system.</span></li> -->
-                        </ul>
-                      </li>
-
-                      <li>
-                        <span class="item-title"
-                          ><u>Thesis Title:</u>
-                          <b
-                            >Enhancing Bangla Language Next Word Prediction and Sentence Completion through Extended RNN
-                            with Bi-LSTM Model On N-gram Language</b
-                          >.</span
-                        >
-                        <!-- <ul class="subitems">
-													
-														<li><span class="subitem">Awarded the <b>Sir Bruce White prize in engineering</b> for the best final year project.</span></li>
-													
-													</ul> -->
-                      </li>
-
-                      <li>
-                        <span class="item-title"><u>Competitive Programming:</u></span>
-                        <ul class="subitems">
-                          <li><span class="subitem">Champions of Binary Fest 2022</span></li>
-                          <li><span class="subitem">Champions of Pre-CodeFest 2021</span></li>
-                          <li>
-                            <span class="subitem"
-                              >Received a certificate of appreciation at Joyjatra’50 TechFest, 2021.</span
-                            >
-                          </li>
-                          <li>
-                            <span class="subitem"
-                              >Participated in more than 300 online and 10 onsite programming contest</span
-                            >
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
+          <div class="row">
+            <div class="col-sm-2"><span class="badge">2019-23</span></div>
+            <div class="col-sm-10">
+              <h6>Uttara University – BSc in Computer Science and Engineering</h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Dean’s List for exceptional academic performance.</li>
+                <li class="list-group-item">Grade: 3.83/4 (top 1% of class).</li>
+                <li class="list-group-item">Thesis: Enhancing Bangla Language Next Word Prediction...</li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div class="card mt-3 p-3">
+        <div class="card p-3">
           <h3 class="card-title">Work Experience</h3>
-          <div>
-            <ul class="card-text font-weight-light list-group list-group-flush">
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2022-NOW
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <h6 class="title font-weight-bold ml-1 ml-md-4">
-                      Associate Software Engineer at Softzino Technologies
-                    </h6>
-
-                    <ul class="items">
-                      <li>
-                        <span class="item"
-                          >Worked alongside an excellent team to design and implement new software features using Agile
-                          methodologies.</span
-                        >
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2022
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <h6 class="title font-weight-bold ml-1 ml-md-4">Customer Service Representative at ShopUp</h6>
-
-                    <ul class="items">
-                      <li>
-                        <span class="item"
-                          >Provided services to the customer by addressing inquiries through live chat and email.</span
-                        >
-                      </li>
-                      <li>
-                        <span class="item">Resolved critical issues and ensuring customer satisfaction.</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2021
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <h6 class="title font-weight-bold ml-1 ml-md-4">
-                      Customer Service Representative at Genex Infosys Limited
-                    </h6>
-
-                    <ul class="items">
-                      <li>
-                        <span class="item">Provided services to the customer by addressing inquiries over call.</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
+          <div class="row">
+            <div class="col-sm-2"><span class="badge">2022-NOW</span></div>
+            <div class="col-sm-10">
+              <h6>Software Engineer at Softzino Technologies</h6>
+              <p>Building web applications using Vue, Laravel, PHP, and TypeScript.</p>
+            </div>
           </div>
         </div>
 
-        <div class="card mt-3 p-3">
-          <h3 class="card-title">Honors and Awards</h3>
-          <div>
-            <ul class="card-text font-weight-light list-group list-group-flush">
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2022
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <ul class="items">
-                      <li>
-                        <span class="item">1<sup>st</sup> place in the Binary Fest</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2021
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <ul class="items">
-                      <li>
-                        <span class="item">Champions of Pre-CodeFest</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2019
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <ul class="items">
-                      <li>
-                        <span class="item">Dean's Award to maintain the CGPA of 3.75 (3 times in a row)</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card mt-3 p-3">
+        <div class="card p-3">
           <h3 class="card-title">Technical Skills</h3>
-          <div>
-            <ul class="card-text font-weight-light list-group list-group-flush">
-              <li class="list-group-item">
-                <u>Machine Learning Frameworks:</u> <a href="https://pytorch.org/" target="_blank">PyTorch</a>,
-                <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a>.
-              </li>
-
-              <li class="list-group-item"><u>Languages:</u> C++, Python, C, MATLAB, PHP, Java, JavaScript, SQL...</li>
-              <li class="list-group-item">
-                <u>Developer Tools:</u> VS Code, Eclipse, Linux, Git, GitHub, GitLab, Figma
-              </li>
-              <li class="list-group-item"><u>Familiar:</u> Docker, Docker-compose, YAML, and AWS</li>
-              <li class="list-group-item">
-                <u>Technologies/Frameworks:</u> Laravel, MySQL, Rest API, Payment Gateway, VueJS, Next.Js, Tailwind CSS,
-                API Integration
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- <div class="card mt-3 p-3">
-          <h3 class="card-title">Teaching Experience</h3>
-          <div>
-            <ul class="card-text font-weight-light list-group list-group-flush">
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2018
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <h6 class="title font-weight-bold ml-1 ml-md-4">
-                      <b
-                        >Provided support for an advanced graduate-level course on machine learning at Carnegie Mellon
-                        University.</b
-                      >
-                    </h6>
-
-                    <ul class="items">
-                      <li>
-                        <span class="item"><u>Class:</u> 10-812 Architectures for Never-Ending Learning.</span>
-                      </li>
-
-                      <li>
-                        <span class="item">Taught by <b>Prof. Tom Mitchell</b>.</span>
-                      </li>
-
-                      <li>
-                        <span class="item"
-                          >Gave a couple of lectures and helped with the organization of the class.</span
-                        >
-                      </li>
-
-                      <li>
-                        <span class="item"
-                          >Designed and co-led the implementation of the software testbed used to support the course
-                          projects.</span
-                        >
-                      </li>
-
-                      <li>
-                        <span class="item">Mentored several students working on class projects.</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-
-              <li class="list-group-item">
-                <div class="row">
-                  <div class="col-xs-2 cl-sm-2 col-md-auto text-left" style="width: 75px">
-                    <span
-                      class="badge font-weight-bold danger-color-dark text-uppercase align-middle"
-                      style="width: 75px"
-                    >
-                      2014, 16
-                    </span>
-                  </div>
-
-                  <div class="col-xs-10 cl-sm-10 col-md mt-2 mt-md-0">
-                    <h6 class="title font-weight-bold ml-1 ml-md-4">
-                      <b
-                        >Teaching Assistant for a graduate-level machine learning course at Carnegie Mellon
-                        University.</b
-                      >
-                    </h6>
-
-                    <ul class="items">
-                      <li>
-                        <span class="item"><u>Class:</u> 10-701/15-781 Introduction to Machine Learning.</span>
-                      </li>
-
-                      <li>
-                        <span class="item"
-                          >Did this for two semesters (taught by <b>Prof. Geoff Gordon</b> and
-                          <b>Prof. Aarti Singh</b> in 2014, and <b>Prof. Tom Mitchell</b> in 2016).</span
-                        >
-                      </li>
-
-                      <li>
-                        <span class="item">Gave some lectures and some recitation lectures.</span>
-                      </li>
-
-                      <li>
-                        <span class="item">Mentored several groups of students working on class projects.</span>
-                      </li>
-
-                      <li>
-                        <span class="item">Wrote and graded homework assignments and exams.</span>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-
-        <div class="card mt-3 p-3">
-          <h3 class="card-title">Other Interests</h3>
-          <div>
-            <ul class="card-text font-weight-light list-group list-group-flush">
-              <li class="list-group-item"><u>Sports:</u> Cricket, Football, Badminton, Basketball.</li>
-
-              <li class="list-group-item">
-                <u>Hobbies:</u> Traveling, Philosophy (I also really want to learn to play the Guitar).
-              </li>
-            </ul>
-          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><b>Frameworks:</b> PyTorch, TensorFlow, Laravel, VueJS, Next.js</li>
+            <li class="list-group-item"><b>Languages:</b> C++, Python, PHP, Java, JavaScript, SQL</li>
+            <li class="list-group-item"><b>Tools:</b> Git, Docker, AWS, Linux</li>
+          </ul>
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="fixed-bottom">
-      &copy; Copyright 2025 Md Ibrahim -- A special thanks to
-      <a href="https://github.com/eaplatanios/eaplatanios.github.io" style="color: red"> Anthony Platanios</a> for
-      making the template publicly available
-    </footer>
-
-    <!-- Core JavaScript Files -->
-    <script src="/assets/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/assets/js/popper.min.js" type="text/javascript"></script>
-    <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/assets/js/mdb.min.js" type="text/javascript"></script>
-    <script
-      async=""
-      src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
-      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script
-      type="text/javascript"
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"
-    ></script>
-    <script src="/assets/js/common.js"></script>
-
-    <!-- GitHub Stars -->
-    <script src="/assets/js/github-stars.js"></script>
-    <script type="text/javascript">
-      githubStars("eaplatanios/symphony-mt", function (stars) {
-        $("#curriculum-learningeaplatanios-symphony-mt-stars").text("" + stars);
-      });
-
-      githubStars("eaplatanios/jelly-bean-world", function (stars) {
-        $("#jelly-bean-worldeaplatanios-jelly-bean-world-stars").text("" + stars);
-      });
-
-      githubStars("eaplatanios/symphony-mt", function (stars) {
-        $("#machine-translationeaplatanios-symphony-mt-stars").text("" + stars);
-      });
-
-      githubStars("eaplatanios/tensorflow_scala", function (stars) {
-        $("#TensorFlow-Scalaeaplatanios-tensorflow_scala-stars").text("" + stars);
-      });
-    </script>
-
-    <!-- Scrolling Progress Bar -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        var navbarHeight = $("#navbar").outerHeight(true);
-        $("body").css({ "padding-top": navbarHeight });
-        $("progress-container").css({ "padding-top": navbarHeight });
-        var progressBar = $("#progress");
-        progressBar.css({ top: navbarHeight });
-        var getMax = function () {
-          return $(document).height() - $(window).height();
-        };
-        var getValue = function () {
-          return $(window).scrollTop();
-        };
-        // Check if the browser supports the progress element.
-        if ("max" in document.createElement("progress")) {
-          // Set the 'max' attribute for the first time.
-          progressBar.attr({ max: getMax() });
-          progressBar.attr({ value: getValue() });
-
-          $(document).on("scroll", function () {
-            // On scroll only the 'value' attribute needs to be calculated.
-            progressBar.attr({ value: getValue() });
-          });
-
-          $(window).resize(function () {
-            var navbarHeight = $("#navbar").outerHeight(true);
-            $("body").css({ "padding-top": navbarHeight });
-            $("progress-container").css({ "padding-top": navbarHeight });
-            progressBar.css({ top: navbarHeight });
-            // On resize, both the 'max' and 'value' attributes need to be calculated.
-            progressBar.attr({ max: getMax(), value: getValue() });
-          });
-        } else {
-          var max = getMax(),
-            value,
-            width;
-          var getWidth = function () {
-            // Calculate the window width as a percentage.
-            value = getValue();
-            width = (value / max) * 100;
-            width = width + "%";
-            return width;
-          };
-          var setWidth = function () {
-            progressBar.css({ width: getWidth() });
-          };
-          setWidth();
-          $(document).on("scroll", setWidth);
-          $(window).on("resize", function () {
-            // Need to reset the 'max' attribute.
-            max = getMax();
-            setWidth();
-          });
-        }
-      });
-    </script>
-
-    <!-- Code Syntax Highlighting -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" />
-    <script src="/assets/js/highlight.pack.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-
-    <!-- Script Used for Randomizing the Projects Order -->
-    <!-- <script type="text/javascript">
-    $.fn.shuffleChildren = function() {
-      $.each(this.get(), function(index, el) {
-        var $el = $(el);
-        var $find = $el.children();
-
-        $find.sort(function() {
-          return 0.5 - Math.random();
-        });
-
-        $el.empty();
-        $find.appendTo($el);
-      });
-    };
-    $("#projects").shuffleChildren();
-  </script> -->
-
-    <!-- Project Cards Layout -->
-    <script type="text/javascript">
-      var $grid = $("#projects");
-
-      // $grid.masonry({ percentPosition: true });
-      // $grid.masonry('layout');
-
-      // Trigger after images load.
-      $grid.imagesLoaded().progress(function () {
-        $grid.masonry({ percentPosition: true });
-        $grid.masonry("layout");
-      });
-    </script>
-
-    <!-- Enable Tooltips -->
-    <script type="text/javascript">
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
-
-    <!-- Google Analytics -->
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-      ga("create", "UA-54519238-1", "auto");
-      ga("send", "pageview");
-    </script>
   </body>
 </html>

@@ -1,0 +1,232 @@
+:root {
+  /* Deep Obsidian - Ultra-Premium Developer Theme */
+  --bg-color: #010409;
+  --surface-blur: rgba(13, 17, 23, 0.85);
+  --border-color: rgba(48, 54, 61, 0.8);
+  --text-main: #f0f6fc;
+  --text-muted: #8b949e;
+  --primary-color: #58a6ff;   /* Cyber Blue */
+  --secondary-color: #bc8cff; /* Deep Purple */
+  --accent-color: #d29922;    /* Gold */
+  --success-color: #3fb950;   /* Matrix Green */
+  --error-color: #f85149;     /* Ruby Red */
+  --tab-bg: #010409;
+  --tab-active: rgba(88, 166, 255, 0.1);
+  --window-shadow: 0 0 40px rgba(88, 166, 255, 0.1);
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #010409;
+  background-image: radial-gradient(circle at top right, rgba(88, 166, 255, 0.05) 0%, transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(188, 140, 255, 0.05) 0%, transparent 40%);
+  color: var(--text-main);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Content Pane (Left) */
+.content-pane {
+  flex: 0 0 60%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: rgba(1, 4, 9, 0.5);
+  border-right: 1px solid var(--border-color);
+  backdrop-filter: blur(10px);
+}
+
+/* IDE Tabs Bar */
+.terminal-tabs {
+  height: 45px;
+  background: var(--bg-color);
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.tab {
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-right: 1px solid var(--border-color);
+  background: var(--bg-color);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  font-family: var(--font-mono);
+  position: relative;
+}
+
+.tab:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-main);
+}
+
+.tab.active {
+  background: var(--tab-active);
+  color: var(--primary-color);
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--primary-color);
+  box-shadow: 0 -4px 10px var(--primary-color);
+}
+
+.tab i { margin-right: 10px; font-size: 0.9rem; }
+.tab .close-tab { margin-left: 12px; font-size: 0.75rem; opacity: 0.4; }
+
+/* Content Scroll */
+.content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px 50px;
+  scroll-behavior: smooth;
+  font-size: 1.05rem;
+}
+
+.content-scroll::-webkit-scrollbar { width: 5px; }
+.content-scroll::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 10px; }
+
+/* Terminal Pane (Right) */
+.terminal-pane {
+  flex: 0 0 40%;
+  height: 100%;
+  background: var(--bg-color);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+#terminal-window {
+  width: 100%;
+  height: 100%;
+  background: var(--surface-blur);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--window-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+/* scanline effect (more subtle Obsidian style) */
+#terminal-window::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.05) 50%), 
+              linear-gradient(90deg, rgba(255, 0, 0, 0.01), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.01));
+  z-index: 101;
+  background-size: 100% 2px, 2px 100%;
+  pointer-events: none;
+  opacity: 0.2;
+}
+
+.terminal-header {
+  height: 35px;
+  background: rgba(22, 27, 34, 0.9);
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.window-controls { display: flex; gap: 8px; }
+.control { width: 12px; height: 12px; border-radius: 50%; opacity: 0.8; }
+.control.close { background: var(--error-color); }
+.control.minimize { background: var(--accent-color); }
+.control.maximize { background: var(--success-color); }
+
+.window-title { margin-left: 18px; font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 0.5px; }
+
+#terminal-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  scrollbar-width: thin;
+}
+
+/* Prompt Styles */
+.command-line { display: flex; align-items: flex-start; margin-bottom: 12px; }
+.prompt-user { color: var(--success-color); font-weight: 700; }
+.prompt-at { color: var(--text-muted); }
+.prompt-path { color: var(--primary-color); }
+.prompt-git { color: var(--error-color); margin-left: 6px; font-size: 0.75rem; opacity: 0.9; }
+.prompt-char { color: var(--text-main); margin-left: 6px; }
+
+.command-text { color: var(--text-main); margin-left: 10px; font-weight: 500; }
+.output { margin: 6px 0 18px 0; white-space: pre-wrap; color: var(--text-muted); line-height: 1.5; }
+
+/* Interactive Input */
+.input-line { display: flex; align-items: center; }
+#real-input { position: absolute; opacity: 0; pointer-events: none; }
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.25em;
+  background: var(--primary-color);
+  margin-left: 5px;
+  box-shadow: 0 0 8px var(--primary-color);
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+/* Profile Image */
+.profile-img-container img {
+  width: 110px;
+  height: 110px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 4px;
+  object-fit: cover;
+  background: var(--bg-color);
+  transition: all 0.3s ease;
+}
+.profile-img-container img:hover { border-color: var(--primary-color); box-shadow: 0 0 15px rgba(88, 166, 255, 0.3); }
+
+/* Bootstrap Integration */
+.card { background: rgba(22, 27, 34, 0.4) !important; border: 1px solid var(--border-color) !important; border-radius: 10px !important; }
+.badge { background: #21262d !important; border: 1px solid var(--border-color); color: var(--text-muted) !important; padding: 4px 8px !important; }
+a { color: var(--secondary-color); text-decoration: none; border-bottom: 1px solid rgba(188, 140, 255, 0.2); transition: 0.2s; }
+a:hover { color: var(--primary-color); border-bottom-color: var(--primary-color); }
+
+/* Mobile Support */
+@media (max-width: 1024px) {
+  body { flex-direction: column; overflow-y: auto; height: auto; }
+  .content-pane, .terminal-pane { flex: 0 0 100%; height: auto; border: none; }
+  .terminal-pane { height: 450px; position: sticky; bottom: 0; z-index: 1000; padding: 15px; }
+  .content-scroll { padding: 30px 20px; }
+}

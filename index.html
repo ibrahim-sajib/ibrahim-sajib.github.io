@@ -1,388 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <title>Md Ibrahim</title>
-    <meta name="description" content="Personal website of Anthony Platanios." />
+    <title>Md Ibrahim | Software Engineer</title>
+    <meta name="description" content="Portfolio of Md Ibrahim, Software Engineer specializing in Laravel, Vue, and AI research." />
 
-    <!-- Fonts and Icons -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"
-    />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
     <!-- CSS Files -->
-    <link rel="stylesheet" href="/assets/css/all.min.css" />
-    <link rel="stylesheet" href="/assets/css/academicons.min.css" />
-    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/terminal.css" />
     <link rel="canonical" href="/" />
 
     <!-- Scripts -->
-    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+    <script src="/assets/js/terminal-shell.js" defer></script>
   </head>
   <body>
-    <!-- Header -->
-    <nav id="navbar" class="navbar fixed-top navbar-expand-md grey lighten-5 z-depth-1 navbar-light">
-      <div class="container-fluid p-0">
-        <div class="row ml-1 ml-sm-0">
-          <span class="contact-icon text-center" style="line-height: 1em">
-            <a href="mailto:ibrahim.cse242@gmail.com"><i class="fa fa-envelope-square gm-icon"></i></a>
-            <a href="https://scholar.google.com/citations?hl=en&authuser=1&user=bLnoE4QAAAAJ" target="_blank" title="Google Scholar"><i class="ai ai-google-scholar-square gs-icon"></i></a>
-            <a href="https://github.com/ibrahim-sajib" target="_blank" title="GitHub"
-              ><i class="fab fa-github-square gh-icon"></i
-            ></a>
-            <a href="https://www.linkedin.com/in/md-ibrahim-7523a6187/" target="_blank" title="LinkedIn"
-              ><i class="fab fa-linkedin li-icon"></i
-            ></a>
-            <a href="https://www.facebook.com/sajib.shayan" target="_blank" title="Facebook"
-              ><i class="fab fa-facebook-square fb-icon"></i
-            ></a>
-            <a href="https://x.com/sajib_shayan" target="_blank" title="Twitter"><i class="fab fa-twitter-square tw-icon"></i></a>
-          </span>
-        </div>
-
-        <button
-          class="navbar-toggler ml-auto"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse text-right" id="navbarNav">
-          <ul class="navbar-nav ml-auto flex-nowrap">
-            <li class="nav-item navbar-active font-weight-bold">
-              <a class="nav-link" href="/">
-                About
-
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/cv/"> CV </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/projects/"> Projects </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/publications/"> Publications </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/teaching/"> Teaching </a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="/moments/"> Moments </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Scrolling Progress Bar -->
-    <progress id="progress" value="0">
-      <div class="progress-container">
-        <span class="progress-bar"></span>
-      </div>
-    </progress>
-
-    <!-- Content -->
-    <div class="content">
-      <div class="text-center mt-5">
-        <img class="profile-img" src="/assets/img/prof_pic.jpg" />
-      </div>
-
-      <div class="col mt-4">
-        <h1 class="title text-center font-weight-bold">Md Ibrahim</h1>
-        <div class="row mt-3 mb-3">
-          <div class="col">
-            <h6 class="mt-1 text-center text-sm-center" style="font-stretch: ultra-condensed">
-              <!-- Aspiring PhD Candidate<br /> -->
-              Associate Software Engineer<br />
-               <a style="color: rgb(60, 72, 88)" href="https://softzino.com/">Softzino Technologies</a>
-            </h6>
+    <div class="content-wrapper" id="about">
+      <section id="about">
+        <div class="profile-img-container">
+          <img src="/assets/img/prof_pic.jpg" alt="Md Ibrahim" />
+          <div class="social-links" style="margin-top: 10px; display: flex; justify-content: center; gap: 15px;">
+            <a href="mailto:ibrahim.cse242@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/ibrahim-sajib" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/md-ibrahim-7523a6187/" target="_blank"><i class="fab fa-linkedin"></i></a>
           </div>
-          <!-- <div class="col-sm-6">
-            <h6 class="mt-1 text-left text-sm-left" style="font-stretch: ultra-condensed">
-              NLP | ML | DL | CV | HCI<br />
-              <a style="color: rgb(60, 72, 88)" href="https://softzino.com/">Softzino Technologies</a>
-            </h6>
-          </div> -->
-          <!-- <div class="col-sm-6">
-      <h6 class="mt-1 text-left text-sm-right" style="font-stretch: ultra-condensed;">
-        <a style="color: rgb(60, 72, 88);" href="http://www.ml.cmu.edu/" target="_blank">Principal Researcher</a><br/>
-        <a style="color: rgb(60, 72, 88);" href="http://www.cs.cmu.edu/" target="_blank">Semantic Machines</a><br/>
-        <a style="color: rgb(60, 72, 88);" href="http://www.cmu.edu/" target="_blank">Microsoft</a>
-      </h6>
+        </div>
+
+        <h1 style="color: var(--primary-color);">Md Ibrahim</h1>
+        <p style="color: var(--secondary-color); font-size: 1.1rem; margin-bottom: 20px;">Software Engineer @ Softzino Technologies</p>
+
+        <div class="intro-text">
+          I am currently a Software Engineer at
+          <a href="https://softzino.com/" target="_blank">Softzino Technologies,</a> where I have been building web applications for more
+          than 3 years with Vue, Laravel, PHP, TypeScript, and JavaScript. With extensive expertise in backend
+          development, particularly with Laravel, MySQL, REST API, and payment gateway integration, I can also work with
+          other web technologies like React js, and Next js. I am keen on continuously deep-diving into new technologies
+          to further enhance my skill set. <br /><br />
+          My research interests are broadly in AI, NLP, ML, DL and HCI and my goal is to design and build reliable AI
+          systems that can comprehend human language's nuances, minimizing communication ambiguity by understanding
+          context, tone, and intent and are aligned with the requirements humans have from technology. I often rely on
+          knowledge, methods, and perspectives from multiple disciplines to address complex problems or questions that
+          cannot be fully understood or solved within the boundaries of Computer Science.
+          <br /><br />
+          Besides this, I was a regular competitive programmer and solved more than
+          <a href="https://www.stopstalk.com/user/profile/sajib_1999" target="_blank"> 1500</a> problems and participated
+          in various programming contests such as ICPC Dhaka Regional. Before joining Softzino Technologies, I was a
+          vice-president of Uttara University Programming Club (UUPC).
+        </div>
+
+        <!-- News -->
+        <div class="news-section" style="margin-top: 40px;">
+          <h3 style="color: var(--accent-color); margin-bottom: 15px; font-family: var(--font-mono);">[ News ]</h3>
+          <div class="news-item">
+            <span class="date">Sep 01, 2025</span>
+            <span class="news-text">Promoted to Software Engineer at <a href="https://softzino.com/">Softzino Technologies</a></span>
+          </div>
+          <div class="news-item">
+            <span class="date">Jan 25, 2025</span>
+            <span class="news-text">Officially graduated with a BSc degree from <a href="https://uttarauniversity.edu.bd/">Uttara University</a></span>
+          </div>
+          <div class="news-item">
+            <span class="date">Mar 01, 2022</span>
+            <span class="news-text">Promoted to Associate Software Engineer at <a href="https://softzino.com/">Softzino Technologies</a></span>
+          </div>
+          <div class="news-item">
+            <span class="date">Sep 06, 2022</span>
+            <span class="news-text">Joined <a href="https://softzino.com/">Softzino Technologies</a> as an Intern</span>
+          </div>
+        </div>
+      </section>
     </div>
-    <div class="col-sm-6">
-      <h6 class="mt-1 text-left text-sm-left" style="font-stretch: ultra-condensed;">
-        Berkeley Way West, Floor 7<br/>
-        1919 Shattuck Ave<br/>
-        Berkeley, CA, 94704
-      </h6>
-    </div> -->
-        </div>
-      </div>
-
-      <!-- Introduction -->
-
-      <div class="col text-justify p-0">
-        I am currently an Software Engineer at
-        <a href="https://softzino.com/">Softzino Technologies,</a> where I have been building web applications for more
-        than 3 years with Vue, Laravel, PHP, TypeScript, and JavaScript. With extensive expertise in backend
-        development, particularly with Laravel, MySQL, REST API, and payment gateway integration, I can also work with
-        other web technologies like React js, and Next js. I am keen on continuously deep-diving into new technologies
-        to further enhance my skill set. <br /><br />
-        My research interests are broadly in AI, NLP, ML, DL and HCI and my goal is to design and build reliable AI
-        systems that can comprehend human language's nuances, minimizing communication ambiguity by understanding
-        context, tone, and intent and are aligned with the requirements humans have from technology. I often rely on
-        knowledge, methods, and perspectives from multiple disciplines to address complex problems or questions that
-        cannot be fully understood or solved within the boundaries of Computer Science.
-        <br /><br />
-
-        Besides this, I was a regular competitive programmer and solved more than
-        <a href="https://www.stopstalk.com/user/profile/sajib_1999" target="_blank"> 1500</a> problems and participated
-        in various programming contest such as ICPC Dhaka Regional. Before, joined in Softzino Technologies, I was a
-        vice-president of Uttara University Programming Club (UUPC).
-      </div>
-
-      <!-- News -->
-      <div class="news mt-3 p-0">
-        <h1 class="title mb-4 p-0">News</h1>
-
-         <div class="row p-0">
-          <div class="col-sm-2 p-0">
-            <span class="badge danger-color-dark font-weight-bold text-uppercase align-middle date ml-3">
-              Sep 01, 2025
-            </span>
-          </div>
-          <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
-            <p>
-              Promoted as an Software Engineer at <a href="https://softzino.com/">Softzino Technologies</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="row p-0">
-          <div class="col-sm-2 p-0">
-            <span class="badge danger-color-dark font-weight-bold text-uppercase align-middle date ml-3">
-              Jan 25, 2025
-            </span>
-          </div>
-          <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
-            <p>
-              Officially graduated with a BSc degree from<a href="https://uttarauniversity.edu.bd/">Uttara University,</a> proud to have received it at the convocation!
-            </p>
-          </div>
-        </div>
-
-        <div class="row p-0">
-          <div class="col-sm-2 p-0">
-            <span class="badge danger-color-dark font-weight-bold text-uppercase align-middle date ml-3">
-              Mar 01, 2022
-            </span>
-          </div>
-          <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
-            <p>
-              Promoted as an Associate Software Engineer at <a href="https://softzino.com/">Softzino Technologies</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="row p-0">
-          <div class="col-sm-2 p-0">
-            <span class="badge danger-color-dark font-weight-bold text-uppercase align-middle date ml-3">
-              Sep 06, 2022
-            </span>
-          </div>
-          <div class="col-sm-10 mt-2 mt-sm-0 ml-3 ml-md-0 p-0 font-weight-light text">
-            <p>
-              Joined <a href="https://softzino.com/">Softzino Technologies</a> as an Intern.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <!-- Footer -->
-    <footer class="fixed-bottom">
-      &copy; Copyright 2025 Md Ibrahim (LU: Sep 24, 2025) -- A special thanks to
-      <a href="https://github.com/eaplatanios/eaplatanios.github.io" style="color: red"> Anthony Platanios</a> for
-      making the template publicly available
-    </footer>
-
-    <!-- Core JavaScript Files -->
-    <script src="/assets/js/jquery.min.js" type="text/javascript"></script>
-    <script src="/assets/js/popper.min.js" type="text/javascript"></script>
-    <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/assets/js/mdb.min.js" type="text/javascript"></script>
-    <script
-      async=""
-      src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"
-      integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-    <script
-      type="text/javascript"
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML"
-    ></script>
-    <script src="/assets/js/common.js"></script>
-
-    <!-- GitHub Stars -->
-    <script src="/assets/js/github-stars.js"></script>
-    <script type="text/javascript">
-      githubStars("eaplatanios/symphony-mt", function (stars) {
-        $("#curriculum-learningeaplatanios-symphony-mt-stars").text("" + stars);
-      });
-
-      githubStars("eaplatanios/jelly-bean-world", function (stars) {
-        $("#jelly-bean-worldeaplatanios-jelly-bean-world-stars").text("" + stars);
-      });
-
-      githubStars("eaplatanios/symphony-mt", function (stars) {
-        $("#machine-translationeaplatanios-symphony-mt-stars").text("" + stars);
-      });
-
-      githubStars("eaplatanios/tensorflow_scala", function (stars) {
-        $("#TensorFlow-Scalaeaplatanios-tensorflow_scala-stars").text("" + stars);
-      });
-    </script>
-
-    <!-- Scrolling Progress Bar -->
-    <script type="text/javascript">
-      $(document).ready(function () {
-        var navbarHeight = $("#navbar").outerHeight(true);
-        $("body").css({ "padding-top": navbarHeight });
-        $("progress-container").css({ "padding-top": navbarHeight });
-        var progressBar = $("#progress");
-        progressBar.css({ top: navbarHeight });
-        var getMax = function () {
-          return $(document).height() - $(window).height();
-        };
-        var getValue = function () {
-          return $(window).scrollTop();
-        };
-        // Check if the browser supports the progress element.
-        if ("max" in document.createElement("progress")) {
-          // Set the 'max' attribute for the first time.
-          progressBar.attr({ max: getMax() });
-          progressBar.attr({ value: getValue() });
-
-          $(document).on("scroll", function () {
-            // On scroll only the 'value' attribute needs to be calculated.
-            progressBar.attr({ value: getValue() });
-          });
-
-          $(window).resize(function () {
-            var navbarHeight = $("#navbar").outerHeight(true);
-            $("body").css({ "padding-top": navbarHeight });
-            $("progress-container").css({ "padding-top": navbarHeight });
-            progressBar.css({ top: navbarHeight });
-            // On resize, both the 'max' and 'value' attributes need to be calculated.
-            progressBar.attr({ max: getMax(), value: getValue() });
-          });
-        } else {
-          var max = getMax(),
-            value,
-            width;
-          var getWidth = function () {
-            // Calculate the window width as a percentage.
-            value = getValue();
-            width = (value / max) * 100;
-            width = width + "%";
-            return width;
-          };
-          var setWidth = function () {
-            progressBar.css({ width: getWidth() });
-          };
-          setWidth();
-          $(document).on("scroll", setWidth);
-          $(window).on("resize", function () {
-            // Need to reset the 'max' attribute.
-            max = getMax();
-            setWidth();
-          });
-        }
-      });
-    </script>
-
-    <!-- Code Syntax Highlighting -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" />
-    <script src="/assets/js/highlight.pack.js"></script>
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-
-    <!-- Script Used for Randomizing the Projects Order -->
-    <!-- <script type="text/javascript">
-    $.fn.shuffleChildren = function() {
-      $.each(this.get(), function(index, el) {
-        var $el = $(el);
-        var $find = $el.children();
-
-        $find.sort(function() {
-          return 0.5 - Math.random();
-        });
-
-        $el.empty();
-        $find.appendTo($el);
-      });
-    };
-    $("#projects").shuffleChildren();
-  </script> -->
-
-    <!-- Project Cards Layout -->
-    <script type="text/javascript">
-      var $grid = $("#projects");
-
-      // $grid.masonry({ percentPosition: true });
-      // $grid.masonry('layout');
-
-      // Trigger after images load.
-      $grid.imagesLoaded().progress(function () {
-        $grid.masonry({ percentPosition: true });
-        $grid.masonry("layout");
-      });
-    </script>
-
-    <!-- Enable Tooltips -->
-    <script type="text/javascript">
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
-
-    <!-- Google Analytics -->
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-      ga("create", "UA-54519238-1", "auto");
-      ga("send", "pageview");
-    </script>
   </body>
 </html>
