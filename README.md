@@ -122,7 +122,7 @@ Beyond software engineering, I explore research domains in **Natural Language Pr
 
 ### [Bariplus](https://github.com/ibrahim-sajib) (Real Estate & Advertisement Platform)
 > **Tech Stack:** Laravel, Vue.js, Nuxt.js, MySQL, Google APIs
-*   Engineered permissions management and integrated location services using Google Maps API.
+*   Engineered permissions management and integrated location services using Google APIs.
 *   Implemented dynamic ad promotion mechanisms and content caching.
 
 ### [Chatbox](https://github.com/ibrahim-sajib/chatbox) (Real-Time Communication Platform)
