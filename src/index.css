@@ -1,0 +1,331 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-display: Georgia, 'Times New Roman', ui-serif, serif;
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, 'SFMono-Regular', monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-field-border: var(--field-border);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-accent-fill: var(--accent-fill);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+}
+
+:root {
+  color-scheme: light;
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --line: #e7e5de;
+  --line-strong: #d3d0c6;
+  --field-border: #8f8c84; /* form inputs: 3:1 against the page, as WCAG 1.4.11 asks */
+  --ink: #17181a;
+  --muted: #5b5e66;
+  --accent: #10b981;
+  --accent-text: #047857;
+  --accent-fill: #047857; /* button fill: dark enough for white text (5.5:1) */
+  --accent-ink: #ffffff;
+  --accent-soft: #e2f6ee;
+  --danger: #b42318;
+  --shadow-soft: 0 1px 2px rgb(23 24 26 / 0.04), 0 4px 16px -6px rgb(23 24 26 / 0.06);
+  --shadow-lift: 0 1px 2px rgb(23 24 26 / 0.05), 0 16px 32px -14px rgb(23 24 26 / 0.16);
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: #111214;
+  --surface: #17191c;
+  --line: #25282d;
+  --line-strong: #353940;
+  --field-border: #63676f; /* form inputs: 3:1 against the page, as WCAG 1.4.11 asks */
+  --ink: #ecebe7;
+  --muted: #a0a4ac;
+  --accent: #10b981;
+  --accent-text: #10b981;
+  --accent-fill: #047857; /* button fill: dark enough for white text (5.5:1) */
+  --accent-ink: #ffffff;
+  --accent-soft: #0e2a21;
+  --danger: #ff8a80;
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 16px -6px rgb(0 0 0 / 0.4);
+  --shadow-lift: 0 1px 2px rgb(0 0 0 / 0.35), 0 18px 36px -14px rgb(0 0 0 / 0.65);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-feature-settings: 'ss01', 'cv11';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  a[href],
+  button:not(:disabled),
+  [role='button'],
+  label[for],
+  select,
+  summary {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: var(--accent-fill);
+    color: var(--accent-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent-text);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.14em] text-muted uppercase;
+  }
+
+  .card {
+    @apply rounded-2xl border border-line bg-surface shadow-soft;
+  }
+
+  .btn {
+    @apply inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-medium whitespace-nowrap transition duration-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-accent-fill text-accent-ink shadow-soft hover:brightness-110;
+  }
+
+  .btn-secondary {
+    @apply border border-line-strong bg-surface text-ink hover:border-ink;
+  }
+
+  .link {
+    @apply text-accent-text underline decoration-accent/40 underline-offset-4 transition-colors hover:decoration-accent;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border border-line px-2.5 py-1 font-mono text-[11px] leading-none text-muted;
+  }
+
+  .field {
+    @apply block w-full rounded-xl border border-field-border bg-bg px-4 py-3 text-[15px] text-ink transition-colors placeholder:text-muted focus:border-accent-text focus:outline-2 focus:outline-offset-0 focus:outline-accent/30;
+  }
+
+  .field[aria-invalid='true'] {
+    @apply border-danger focus:outline-danger/30;
+  }
+}
+
+/* Ambient hero background: drifting accent glows and slowly rising motes. */
+.hero-backdrop {
+  --glow-strength: 20%;
+  mask-image: linear-gradient(to bottom, #000 70%, transparent);
+}
+
+.dark .hero-backdrop {
+  --glow-strength: 15%;
+}
+
+.hero-glow {
+  position: absolute;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--accent) var(--glow-strength), transparent);
+  filter: blur(90px);
+  will-change: transform;
+}
+
+.hero-glow-a {
+  top: -12%;
+  right: -6%;
+  width: min(46rem, 80vw);
+  aspect-ratio: 1;
+}
+
+.hero-glow-b {
+  bottom: -18%;
+  left: -10%;
+  width: min(34rem, 70vw);
+  aspect-ratio: 1;
+}
+
+.hero-glow-c {
+  top: 38%;
+  left: 42%;
+  width: min(22rem, 50vw);
+  aspect-ratio: 1;
+  opacity: 0.7;
+}
+
+.hero-mote {
+  position: absolute;
+  bottom: -2%;
+  border-radius: 9999px;
+  background: var(--accent);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-glow-a {
+    animation: drift-a 26s ease-in-out infinite alternate;
+  }
+
+  .hero-glow-b {
+    animation: drift-b 32s ease-in-out infinite alternate;
+  }
+
+  .hero-glow-c {
+    animation: drift-c 22s ease-in-out infinite alternate;
+  }
+
+  .hero-mote {
+    animation-name: mote;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes drift-a {
+  to {
+    transform: translate(-14vw, 10vh) scale(1.15);
+  }
+}
+
+@keyframes drift-b {
+  to {
+    transform: translate(12vw, -12vh) scale(0.9);
+  }
+}
+
+@keyframes drift-c {
+  to {
+    transform: translate(-10vw, -8vh) scale(1.25);
+  }
+}
+
+@keyframes mote {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.45;
+  }
+  85% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate(3vw, -85vh);
+    opacity: 0;
+  }
+}
+
+/* Motion: hero entrance + scroll reveals. Both are skipped for reduced motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    animation-delay: calc(var(--i, 0) * 90ms + 80ms);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: perspective(1000px) translateY(28px) rotateX(12deg);
+    transform-origin: 50% 100%;
+    transition:
+      opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--delay, 0ms);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 3D tilt towards the pointer, with a glare that follows it (hooks/useTilt.js). */
+[data-tilt] {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+[data-tilt]::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--glare-x, 50%) var(--glare-y, 50%),
+    color-mix(in srgb, var(--accent) 16%, transparent),
+    transparent 55%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+[data-tilt][data-tilting] {
+  transform: perspective(1000px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  box-shadow: var(--shadow-lift);
+  transition:
+    transform 0.15s ease-out,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  transition-delay: 0s;
+}
+
+[data-tilt][data-tilting]::after {
+  opacity: 1;
+}
+
+/* Headline text lifts off the card while it is tilted. */
+[data-tilt] .font-display {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+[data-tilt][data-tilting] .font-display {
+  transform: translateZ(28px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
